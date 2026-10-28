@@ -12,8 +12,8 @@
 - Dokumentation zu privaten GitHub-Repositories, Downloadkanal und dem für
   Folgeversionen erforderlichen gleichen lokalen Signierschlüssel.
 - Bestehende vier Vorlagen und der feste Spielplanstand 28.10.2026 bleiben
-  erhalten. Die GitHub-Quelle ist vorbereitet; solange das Repository privat
-  bleibt, ist dieser Onlinekanal ohne Anmeldung nicht erreichbar.
+  erhalten. Das GitHub-Repository bleibt auf Wunsch privat. Die App startet
+  ohne Onlinequelle; Aktualisieren per APK-Datei ist der Standardweg.
 
 # Version 0.4.0 – 28.10.2026
 

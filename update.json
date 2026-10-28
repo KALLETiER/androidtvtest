@@ -2,6 +2,6 @@
   "versionCode": 5,
   "versionName": "0.5.0",
   "apkUrl": "https://raw.githubusercontent.com/KALLETiER/androidtvtest/main/releases/Andres-Heimspiel-0.5.0.apk",
-  "sha256": "a8b453d616adb3575592f8d40625bb28e388d30d6e738a37df9c9d2f3dd89369",
-  "notes": "Neu: Bayern Rotglut als fünfte Vorlage. Neue Update-Verwaltung mit Versions-, Paket-, Signatur- und Prüfsummenprüfung."
+  "sha256": "a527c01cf464a394f05d40fe31fed9ba9265d2cc409ad566edccb7831e7d8100",
+  "notes": "Neu: Bayern Rotglut und APK-Updates über Einstellungen. Repository bleibt privat; Online-Abfragen sind standardmäßig aus."
 }

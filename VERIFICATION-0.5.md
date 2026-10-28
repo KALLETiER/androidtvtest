@@ -20,11 +20,19 @@ Stand: 28.10.2026. Paket `de.andre.heimspiel`, Versionscode 5.
 - Der Updater lädt nur per HTTPS, begrenzt Manifest/APK-Größe und prüft beim
   Download zusätzlich SHA256 und die Version aus dem Manifest. Lokale APKs
   werden ebenfalls auf Paket, neuere Version und aktuellen Signierer geprüft.
-- Das private GitHub-Repository ist als Update-Kanal vorbereitet. Anonyme
-  Online-Downloads benötigen noch eine öffentlich erreichbare Quelle; ein
-  GitHub-Login vom PC wird nicht in die App kopiert.
+- Der sichtbare Android-Installationsdialog mit aktiviertem Installieren-Button
+  wurde auf API 30 erreicht; keine Installation bestätigt. Separater Prüflauf
+  mit erlaubter Installation ebenfalls erfolgreich, 14 Prüfungen ohne Fehler.
+- Auf dem Xiaomi Fire TV ist `com.android.documentsui/.picker.PickActivity`
+  für die APK-Dateiauswahl vorhanden (nur Auflösung geprüft, nicht geöffnet).
+- Quellcode und APK im GitHub-Repository hochgeladen. Auf ausdrücklichen Wunsch
+  bleibt es privat. Die finale App startet ohne Onlinequelle; APK-Dateien sind
+  der Standardweg. Ein GitHub-Login vom PC wird nicht in die App kopiert.
+- WLAN-Update auf dem freigegebenen Xiaomi Fire TV 192.168.0.77 erfolgreich:
+  `versionName=0.5.0`, `versionCode=5`. Einstellungsdatei vor/nach dem Update
+  identisch. Fernseher blieb `Asleep`, Display `OFF`; App nicht geöffnet.
 
-APK-SHA256: `a8b453d616adb3575592f8d40625bb28e388d30d6e738a37df9c9d2f3dd89369`.
+APK-SHA256: `a527c01cf464a394f05d40fe31fed9ba9265d2cc409ad566edccb7831e7d8100`.
 
 Der Spielplan bleibt ein fester Stand vom 28.10.2026. HDMI-Bildwechsel und
 Home-Tasten-Übernahme wurden nicht verändert. Die App deaktiviert keinen

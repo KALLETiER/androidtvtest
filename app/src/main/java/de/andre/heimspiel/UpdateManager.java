@@ -53,7 +53,8 @@ public final class UpdateManager implements AutoCloseable {
     private static final long MAX_APK_BYTES = 64L * 1024 * 1024;
     private static final int TIMEOUT_MS = 15000;
     private static final String APK_MIME = "application/vnd.android.package-archive";
-    private static final String DEFAULT_SOURCE = "https://raw.githubusercontent.com/KALLETiER/androidtvtest/main/update.json";
+    // Private GitHub repository: use APK files unless a public source is explicitly configured.
+    private static final String DEFAULT_SOURCE = "";
 
     private final Activity activity;
     private final Consumer<JSONObject> callback;

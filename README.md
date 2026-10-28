@@ -53,16 +53,17 @@ mit demselben Schlüssel signiert sein. Beim Online-Download wird zusätzlich di
 SHA256-Prüfsumme mit der Updatebeschreibung verglichen. Ein Update über die
 bestehende Installation erhält die Einstellungen.
 
-**Der Onlinekanal ist vorbereitet, aber noch nicht anonym erreichbar.** Die
-Standardadresse verweist auf das private Repository
-[KALLETiER/androidtvtest](https://github.com/KALLETiER/androidtvtest). Private
-GitHub-Dateien und private Release-Downloads erfordern eine Anmeldung, die der
-Updater derzeit nicht unterstützt. Für Online-Updates braucht die App eine
-ohne Anmeldung erreichbare HTTPS-Quelle. Die Quellenadresse lässt sich am TV
-ändern; wird der vorbereitete Kanal später öffentlich erreichbar, kann sie
-unverändert bleiben. Veröffentlichung und Aktivierung sind getrennte Schritte.
-Eine privat heruntergeladene APK kann auch separat übertragen und über die
-Dateiauswahl übernommen werden. Mehr dazu steht in [UPDATES.md](UPDATES.md).
+**Das Repository bleibt auf Wunsch privat.** Quellcode und APK liegen unter
+[KALLETiER/androidtvtest](https://github.com/KALLETiER/androidtvtest). Lade die
+APK dort mit deinem GitHub-Zugang herunter und stelle sie auf einem vom TV
+erreichbaren Speicher bereit. Die vorhandene Dokumentauswahl des Xiaomi Fire TV
+kann sie über **APK-Datei auswählen** übernehmen. WLAN-Installation per ADB
+bleibt ebenfalls möglich.
+
+Die App startet standardmäßig ohne Onlinequelle und führt keine automatischen
+Updateabfragen aus. Eine ohne Anmeldung erreichbare HTTPS-Quelle lässt sich
+später optional eintragen; der Updater übernimmt keinen GitHub-Login vom PC.
+Mehr dazu steht in [UPDATES.md](UPDATES.md).
 
 ## Erste Installation und WLAN-Update
 

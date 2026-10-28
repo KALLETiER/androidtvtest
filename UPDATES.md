@@ -2,14 +2,16 @@
 
 Andrés Heimspiel 0.5.0 enthält einen nativen Update-Bereich unter
 **Einstellungen → Updates**. Die Oberfläche nutzt dafür die Android-Brücke;
-WebView-Inhalte laden und installieren keine APK selbst. Der GitHub-Kanal ist
-vorbereitet, benötigt für anonyme Downloads aber noch eine erreichbare Quelle.
+WebView-Inhalte laden und installieren keine APK selbst. Das GitHub-Repository
+bleibt auf Wunsch privat. Standardmäßig ist deshalb keine Onlinequelle aktiv;
+Updates erfolgen über ausgewählte APK-Dateien oder per WLAN/ADB.
 
 ## Eine neue Version am TV installieren
 
 ### Über die Dateiauswahl
 
-1. Die neuere, passend signierte Heimspiel-APK auf einem Speicher beziehungsweise
+1. Die neue APK aus dem privaten GitHub-Repository mit deinem GitHub-Zugang
+   herunterladen. Die neuere, passend signierte Heimspiel-APK auf einem Speicher beziehungsweise
    bei einem Dateianbieter bereitstellen, den die TV-Dateiauswahl erreichen kann.
 2. **APK-Datei auswählen** öffnen und die Datei wählen. Der Import läuft über
    Androids Dokumentauswahl und kopiert die Datei in den privaten App-Cache.
@@ -28,8 +30,8 @@ Installationsberechtigung.
 ### Über eine Onlinequelle
 
 1. Die HTTPS-Adresse der `update.json` unter **Adresse für Online-Updates**
-   eintragen und **Quelle speichern** wählen, falls ein anderer Downloadkanal
-   als die vorbereitete GitHub-Adresse verwendet wird.
+   eintragen und **Quelle speichern** wählen. Die App hat standardmäßig keine
+   Onlinequelle hinterlegt.
 2. **Nach Updates suchen** wählen. Die App zeigt eine verfügbare neuere Version
    und deren Hinweise an.
 3. **Herunterladen** wählen. Fortschritt und Dateiprüfung werden angezeigt.
@@ -93,8 +95,8 @@ vorbereiteten Adressen lauten:
 - Updatebeschreibung: `https://raw.githubusercontent.com/KALLETiER/androidtvtest/main/update.json`
 - APK 0.5.0: `https://raw.githubusercontent.com/KALLETiER/androidtvtest/main/releases/Andres-Heimspiel-0.5.0.apk`
 
-Diese Dokumentation beschreibt die vorgesehenen Dateien; sie behauptet weder
-einen bereits abgeschlossenen Upload noch einen bereits aktiven Onlinekanal.
+Quellcode, APK und `update.json` sind im privaten Repository hochgeladen.
+Die Onlinefunktion bleibt ohne hinterlegte Quelle ausgeschaltet.
 Ein privates GitHub-Repository macht Dateien und Release-Downloads nicht anonym
 erreichbar. Deshalb funktioniert dessen normale GitHub- oder Raw-Adresse
 nicht für diesen Updater, solange das Repository privat ist. Eine Anmeldung
@@ -104,7 +106,7 @@ Der Quellcode kann privat bleiben, während ausschließlich die signierte APK
 und die `update.json` über einen passenden öffentlichen HTTPS-Downloadkanal
 bereitgestellt werden. Alternativ die APK aus dem privaten Repository separat
 übertragen und den Dateiweg oder ADB verwenden. Wird der vorbereitete Kanal
-später ohne Anmeldung erreichbar, ist dafür kein neuer App-Build nötig.
+später ohne Anmeldung erreichbar, kann seine Adresse am TV eingetragen werden.
 Veröffentlichung und Zugriffsberechtigungen des Downloadkanals müssen zur
 gewünschten Sichtbarkeit passen. Keine Tokens, Schlüssel oder Passwörter in
 Dateien oder URLs ablegen.
@@ -120,7 +122,7 @@ Dateien oder URLs ablegen.
 2. **Version erhöhen und prüfen.** Beispiel für die nächste Version:
 
    ```powershell
-   .\gradlew.bat assembleDebug lintDebug -PheimspielVersionCode=6 -PheimspielVersionName=0.6.0
+   .\gradlew.bat assembleDebug lintDebug '-PheimspielVersionCode=6' '-PheimspielVersionName=0.6.0'
    ```
 
    Die APK liegt unter `app/build/outputs/apk/debug/app-debug.apk`. Paket,
