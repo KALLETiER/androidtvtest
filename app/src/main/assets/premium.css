@@ -1,0 +1,111 @@
+/* A television layout: artwork first, calm club colours, one focus treatment. */
+html,body{background:#111216}
+#bayern-heimspiel .bh-tv{--bh-ink:#f5f5f7;--bh-muted:#aaaab5;--bh-accent:#f5f5f7;--bh-round:16px;background:radial-gradient(ellipse at 85% 0,#421522 0,transparent 58%),#111216;color:var(--bh-ink)}
+#bayern-heimspiel .bh-tv::before{display:none}
+#bayern-heimspiel .bh-tv[data-scene=red]{background:radial-gradient(ellipse at 85% 0,#851c34 0,transparent 70%),#271016}
+#bayern-heimspiel .bh-tv[data-scene=night]{background:radial-gradient(ellipse at 85% 0,#252630 0,transparent 60%),#0c0d10}
+#bayern-heimspiel .bh-header{height:88px;min-height:88px;padding:16px 80px;gap:0;background:transparent;border-bottom:1px solid #ffffff0c}
+#bayern-heimspiel .bh-brand{gap:0}
+#bayern-heimspiel .bh-brand img{width:52px;height:52px;margin-right:16px}
+#bayern-heimspiel .bh-brand strong{font-size:19px;letter-spacing:1px}
+#bayern-heimspiel .bh-brand small{font-size:15px;color:#aaaab5;letter-spacing:2px}
+#bayern-heimspiel .bh-nav{margin-left:48px;gap:0}
+#bayern-heimspiel .bh-nav button{font-size:24px;padding:13px 20px;margin-right:9px;min-height:54px;border-radius:9px;color:#b9b9c3}
+#bayern-heimspiel .bh-nav button[aria-current=page]{background:transparent;color:#fff;box-shadow:inset 0 -3px #df2447;border-radius:0}
+#bayern-heimspiel .bh-nav button:hover{background:#ffffff0a}
+#bayern-heimspiel .bh-status{gap:0;font-size:27px;color:#f3f3f6}
+#bayern-heimspiel .bh-clock{margin-right:26px}
+#bayern-heimspiel .bh-icon-button{width:48px;height:48px;min-width:48px;border-radius:50%;background:#ffffff08}
+#bayern-heimspiel .bh-icon-button[aria-current=page]{background:#34313a;color:#fff}
+#bayern-heimspiel .bh-main{padding:20px 80px 16px;scrollbar-color:#5c525c #111216}
+#bayern-heimspiel [data-view=home]{position:relative}
+#bayern-heimspiel .bh-hero{height:166px;min-height:166px;padding:10px 0;background:transparent;box-shadow:none;border-radius:0;overflow:visible}
+#bayern-heimspiel .bh-hero::before{display:none}
+#bayern-heimspiel .bh-hero-text{z-index:2;max-width:65%}
+#bayern-heimspiel .bh-kicker{font-size:16px;line-height:1.4;letter-spacing:2.5px;color:#c58c9a}
+#bayern-heimspiel .bh-hero h2{font-size:58px;line-height:1.05;letter-spacing:-1.5px;margin:6px 0 9px;color:#f6f5f7}
+#bayern-heimspiel .bh-hero .bh-hero-line{font-size:25px;line-height:1.35;color:#c4c1c9}
+#bayern-heimspiel .bh-arena-art{width:61%;height:220px;right:-25px;bottom:-22px;opacity:.18;object-position:right center;filter:grayscale(1);mask-image:linear-gradient(90deg,transparent 0,#000 50%);-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 50%)}
+#bayern-heimspiel .bh-home-audio{position:absolute;z-index:3;right:0;top:127px;height:33px;padding:0;gap:0;color:#aaa7b1;font-size:18px}
+#bayern-heimspiel .bh-home-audio>.bh-symbol{width:21px;height:21px;min-width:21px;margin-right:9px;opacity:.75}
+#bayern-heimspiel .bh-home-audio-copy{flex:initial;overflow:visible}
+#bayern-heimspiel .bh-home-audio-copy strong{font-size:18px;margin-right:16px;font-weight:400}
+#bayern-heimspiel #bh-home-hymn-status{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+#bayern-heimspiel #bh-home-hymn-action{min-height:33px;padding:5px 11px;font-size:18px;background:#ffffff09;color:#ceccd4;border-radius:7px}
+#bayern-heimspiel .bh-title{margin:16px 0 10px;min-height:30px;align-items:center}
+#bayern-heimspiel .bh-title h3{font-size:25px;line-height:1.3;font-weight:500;color:#f0eff3}
+#bayern-heimspiel .bh-text-button{font-size:19px;min-height:30px;padding:2px 4px;color:#aaa7b2}
+#bayern-heimspiel .bh-text-button .bh-symbol{width:19px;height:19px;min-width:19px;margin-left:8px}
+#bayern-heimspiel .bh-apps-home{height:196px;gap:22px;grid-template-columns:repeat(6,minmax(0,1fr))}
+#bayern-heimspiel .bh-tv .bh-app-open{display:flex;flex-direction:column;align-items:stretch;justify-content:flex-start;min-width:0;width:100%;height:196px;min-height:196px;padding:0;gap:0;border:0;border-radius:0;background:transparent;color:#dddce3!important;box-shadow:none;overflow:visible;font-size:23px!important;transform:none;text-align:left}
+#bayern-heimspiel .bh-app-art{display:flex;position:relative;align-items:center;justify-content:center;min-width:0;width:100%;height:156px;min-height:156px;border-radius:var(--bh-round);background:#25272e;box-shadow:inset 0 0 0 1px #ffffff09;overflow:hidden;transition:transform .15s,box-shadow .15s}
+#bayern-heimspiel .bh-tv .bh-app-open img.bh-app-banner{display:block;width:100%;height:100%;object-fit:contain;border-radius:0;max-width:none}
+#bayern-heimspiel .bh-tv .bh-app-open img.bh-app-icon{display:block;width:88px;height:88px;object-fit:contain;border-radius:14px;max-width:none}
+#bayern-heimspiel .bh-app-wordmark{font-size:34px;font-weight:500;text-align:center;max-width:90%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#f5f5f7}
+#bayern-heimspiel .bh-app-open .bh-app-label{display:block;margin:11px 4px 0;font-size:23px;line-height:29px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;-webkit-line-clamp:initial;-webkit-box-orient:initial;text-align:left;color:#c5c4cc}
+#bayern-heimspiel .bh-app-open[data-brand=netflix] .bh-app-art{background:#070708}
+#bayern-heimspiel .bh-app-open[data-brand=netflix] .bh-app-wordmark{color:#e82c3e;letter-spacing:1px}
+#bayern-heimspiel .bh-app-open[data-brand=youtube] .bh-app-art{background:#f1f1f3}
+#bayern-heimspiel .bh-app-open[data-brand=youtube] .bh-app-wordmark{color:#df2632}
+#bayern-heimspiel .bh-app-open[data-brand=prime] .bh-app-art{background:#153a59}
+#bayern-heimspiel .bh-app-open[data-brand=disney] .bh-app-art{background:#17275c}
+#bayern-heimspiel .bh-app-open[data-brand=dazn] .bh-app-art{background:#f0f1d8}
+#bayern-heimspiel .bh-app-open[data-brand=dazn] .bh-app-wordmark{color:#161b1f}
+#bayern-heimspiel .bh-app-open[data-brand=wow] .bh-app-art{background:#126fd6}
+#bayern-heimspiel .bh-app-open[data-brand=spotify] .bh-app-art{background:#153a2b}
+#bayern-heimspiel .bh-app-open[data-brand=appletv] .bh-app-art{background:#050506}
+#bayern-heimspiel .bh-app-add .bh-app-art{background:#1b1d23;box-shadow:inset 0 0 0 1px #ffffff16;color:#8c8f9b;font-size:52px;font-weight:400}
+#bayern-heimspiel .bh-app-add .bh-app-label{color:#93929d}
+#bayern-heimspiel .bh-inputs-home{height:114px;gap:22px;grid-template-columns:repeat(6,minmax(0,1fr))}
+#bayern-heimspiel .bh-inputs-home>.bh-source{grid-column:span 2}
+#bayern-heimspiel .bh-tv .bh-source,#bayern-heimspiel .bh-tv .bh-inputs-detail .bh-source:first-child{height:114px;min-height:114px;padding:23px 25px;background:#202128;color:#f0eff4;border-radius:var(--bh-round);box-shadow:inset 0 0 0 1px #ffffff0a;gap:0;transform:none}
+#bayern-heimspiel .bh-source-icon,#bayern-heimspiel .bh-tv .bh-inputs-detail .bh-source:first-child .bh-source-icon{width:48px;height:48px;margin-right:20px;background:#ffffff07;color:#c8c8d1;border-radius:12px}
+#bayern-heimspiel .bh-source-icon .bh-symbol{width:26px;height:26px;min-width:26px}
+#bayern-heimspiel .bh-source-name,#bayern-heimspiel .bh-tv .bh-inputs-detail .bh-source:first-child .bh-source-name{font-size:25px;line-height:1.3;color:#e9e8ef;font-weight:500}
+#bayern-heimspiel .bh-source-port,#bayern-heimspiel .bh-tv .bh-inputs-detail .bh-source:first-child .bh-source-port{font-size:19px;line-height:1.4;margin-top:5px;color:#9d9ca9}
+#bayern-heimspiel .bh-source-state{margin-left:16px;font-size:18px;color:#a5a5b1}
+#bayern-heimspiel .bh-source-state[data-state=active]::before{background:#69bd8a}
+#bayern-heimspiel .bh-fixture-section>.bh-title{margin-top:20px}
+#bayern-heimspiel .bh-fixture-label{font-size:17px;color:#777784}
+#bayern-heimspiel .bh-tv .bh-match{height:103px;min-height:103px;padding:13px 20px;gap:0;border-radius:14px;background:#1b1c22;color:#dcdae3;box-shadow:inset 0 0 0 1px #ffffff09;transform:none}
+#bayern-heimspiel .bh-match-meta{font-size:16px;line-height:1.4;color:#9d7f8b}
+#bayern-heimspiel .bh-match-opponent{font-size:25px;line-height:1.3;color:#d9d7e0;margin:3px 0}
+#bayern-heimspiel .bh-match time{font-size:19px;line-height:1.35;color:#a4a2ae}
+#bayern-heimspiel .bh-match time strong{font-weight:500;color:#d1cdd8;margin-left:5px}
+#bayern-heimspiel .bh-fixture-source{font-size:15px;min-height:22px;margin-top:7px;color:#71717f}
+#bayern-heimspiel .bh-fixture-source a{display:inline-flex;align-items:center;color:#93909e;text-decoration:none}
+#bayern-heimspiel .bh-fixture-source a .bh-symbol{width:16px;height:16px;min-width:16px;margin-left:5px}
+#bayern-heimspiel .bh-quick{margin-top:17px;padding-top:12px;min-height:41px;border-top:1px solid #ffffff0a}
+#bayern-heimspiel .bh-slogan{font-size:17px;color:#7c7783;letter-spacing:2.5px}
+#bayern-heimspiel .bh-quick-actions{gap:0}
+#bayern-heimspiel .bh-quick-actions button{font-size:18px;min-height:32px;padding:3px 0;margin-left:32px;color:#98949f;gap:0}
+#bayern-heimspiel .bh-quick-actions .bh-symbol{margin-right:9px;width:20px;height:20px;min-width:20px}
+#bayern-heimspiel .bh-tv img.bh-symbol{display:inline-block;object-fit:contain;filter:brightness(0) invert(1);opacity:.82;font-size:0}
+#bayern-heimspiel .bh-icon-button img.bh-symbol{width:25px;height:25px;min-width:25px}
+#bayern-heimspiel .bh-page-heading{background:#232029;border:0;box-shadow:none;padding:26px 30px;border-radius:16px}
+#bayern-heimspiel .bh-page-heading p,#bayern-heimspiel .bh-help,#bayern-heimspiel .bh-note{color:#a8a3b0}
+#bayern-heimspiel .bh-app-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:28px 22px}
+#bayern-heimspiel .bh-app-grid .bh-app-open{height:218px;min-height:218px;padding:0;font-size:24px!important;align-items:stretch;justify-content:flex-start}
+#bayern-heimspiel .bh-app-grid .bh-app-art{height:174px;min-height:174px}
+#bayern-heimspiel .bh-app-meta{padding:2px 3px 0;min-height:42px;font-size:18px;color:#9b96a5}
+#bayern-heimspiel .bh-app-meta>span{display:none}
+#bayern-heimspiel .bh-favorite{margin-left:auto;width:39px;height:35px;min-width:39px;min-height:35px;font-size:24px;background:#ffffff06;color:#797481}
+#bayern-heimspiel .bh-favorite[aria-pressed=true]{background:#b8264030;color:#ff8396}
+#bayern-heimspiel .bh-inputs-detail{gap:22px}
+#bayern-heimspiel .bh-inputs-detail .bh-source,#bayern-heimspiel .bh-tv .bh-inputs-detail .bh-source:first-child{height:164px;min-height:164px;flex-direction:row;align-items:center}
+#bayern-heimspiel .bh-input-names,#bayern-heimspiel .bh-settings-panel{background:#1b1c23;border:1px solid #ffffff0b;box-shadow:none;border-radius:16px}
+#bayern-heimspiel .bh-settings-tabs button{background:transparent;color:#a8a2b2;border-radius:12px}
+#bayern-heimspiel .bh-settings-tabs button[aria-pressed=true]{background:#34303c;color:#fff;box-shadow:inset 3px 0 #e12a4b}
+#bayern-heimspiel .bh-tv .bh-action{background:#37323e;color:#f1edf5;box-shadow:none;border:1px solid #ffffff09;border-radius:12px}
+#bayern-heimspiel .bh-tv .bh-action.secondary{background:#ffffff05;color:#bdb5c8;border-color:#ffffff14}
+#bayern-heimspiel .bh-field,#bayern-heimspiel .bh-option,#bayern-heimspiel .bh-option small{color:#b6b0c1}
+#bayern-heimspiel .bh-field input[type=text],#bayern-heimspiel .bh-field textarea,#bayern-heimspiel .bh-field select{background:#27242e;color:#f1edf6;border:1px solid #494150;border-radius:12px}
+#bayern-heimspiel .bh-field select option{background:#27242e;color:#f1edf6}
+#bayern-heimspiel .bh-divider{background:#ffffff0b}
+#bayern-heimspiel .bh-overlay{background:radial-gradient(ellipse at 70% 0,#3d1423,transparent 70%),#121116}
+#bayern-heimspiel .bh-tv button:focus,#bayern-heimspiel .bh-tv a:focus,#bayern-heimspiel .bh-tv input:focus,#bayern-heimspiel .bh-tv select:focus,#bayern-heimspiel .bh-tv textarea:focus{outline:3px solid #f4f3f7;outline-offset:4px;box-shadow:0 7px 22px #0005}
+#bayern-heimspiel .bh-tv .bh-app-open:focus{outline:0;box-shadow:none;transform:none}
+#bayern-heimspiel .bh-app-open:focus .bh-app-art{outline:0;transform:scale(1.025);box-shadow:0 0 0 3px #f4f3f7,0 12px 28px #0008}
+#bayern-heimspiel .bh-app-open:focus .bh-app-label{color:#fff}
+#bayern-heimspiel .bh-source:focus,#bayern-heimspiel .bh-match:focus{transform:none}
+@media(prefers-reduced-motion:reduce){#bayern-heimspiel .bh-app-art{transition:none}}

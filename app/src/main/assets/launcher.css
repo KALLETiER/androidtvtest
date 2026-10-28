@@ -1,0 +1,185 @@
+#bayern-heimspiel { width:100%; }
+  #bayern-heimspiel .bh-tv { --bh-red:#e22743; --bh-accent:#ffd5dd; --bh-round:17px; --bh-ink:#fff8fa; --bh-muted:#e0bbc7; position:relative; isolation:isolate; container-type:inline-size; overflow:hidden; border-radius:19px; background:radial-gradient(ellipse at 100% 5%,#971534,transparent 68%),linear-gradient(120deg,#380c1c,#651028); color:var(--bh-ink); color-scheme:dark; font:400 14px/1.4 Roboto,"Noto Sans",Arial,sans-serif; min-height:560px; box-shadow:0 18px 48px #0002; }
+  #bayern-heimspiel .bh-tv::before { content:""; position:absolute; inset:-25%; z-index:-1; pointer-events:none; opacity:.45; background:repeating-conic-gradient(from 45deg,#fff8fa08 0% 25%,transparent 0% 50%) 0 0/82px 82px; transform:skewX(-18deg); }
+  #bayern-heimspiel .bh-tv[data-scene=red] { background:radial-gradient(ellipse at 100% 0,#ef375b,transparent 75%),linear-gradient(120deg,#8d1331,#b51d3b); }
+  #bayern-heimspiel .bh-tv[data-scene=night] { background:radial-gradient(ellipse at 95% 5%,#5b1230,transparent 65%),#220c19; }
+  #bayern-heimspiel .bh-tv *, #bayern-heimspiel .bh-tv *::before, #bayern-heimspiel .bh-tv *::after { box-sizing:border-box; }
+  #bayern-heimspiel .bh-tv [hidden] { display:none !important; }
+  #bayern-heimspiel .bh-tv button, #bayern-heimspiel .bh-tv input, #bayern-heimspiel .bh-tv select, #bayern-heimspiel .bh-tv textarea { font:inherit; }
+  #bayern-heimspiel .bh-tv button { color:inherit; border:0; }
+  #bayern-heimspiel .bh-tv button:disabled { opacity:.45; }
+  #bayern-heimspiel .bh-tv button, #bayern-heimspiel .bh-tv label, #bayern-heimspiel .bh-tv input, #bayern-heimspiel .bh-tv select { -webkit-tap-highlight-color:transparent; }
+  #bayern-heimspiel .bh-tv svg { width:18px; height:18px; flex-shrink:0; }
+  #bayern-heimspiel .bh-header { padding:22px 27px 17px; display:flex; gap:22px; justify-content:space-between; align-items:center; background:#28081540; border-bottom:1px solid #fff2f614; margin-bottom:18px; }
+  #bayern-heimspiel .bh-brand { display:flex; gap:10px; align-items:center; }
+  #bayern-heimspiel .bh-brand img { width:38px; height:38px; object-fit:contain; }
+  #bayern-heimspiel .bh-brand strong { display:block; font-size:12px; letter-spacing:1px; font-weight:500; }
+  #bayern-heimspiel .bh-brand small { display:block; color:#efd3dc; letter-spacing:2px; font-size:11px; margin-top:2px; }
+  #bayern-heimspiel .bh-nav { display:flex; align-items:center; gap:5px; margin-right:auto; }
+  #bayern-heimspiel .bh-nav button { min-height:36px; background:transparent; color:#f0d2dc; border-radius:30px; padding:8px 12px; font-size:12px; transition:background .15s,color .15s; }
+  #bayern-heimspiel .bh-nav button[aria-current=page] { background:#fff6f8; color:#7c1430; box-shadow:0 4px 10px #24001025; }
+  #bayern-heimspiel .bh-nav button:hover { background:#ffffff1b; color:#fff; }
+  #bayern-heimspiel .bh-status { display:flex; align-items:center; gap:12px; font-size:12px; color:#fff0f5; }
+  #bayern-heimspiel .bh-status span { display:flex; align-items:center; gap:5px; }
+  #bayern-heimspiel .bh-status .bh-weather svg { width:17px; height:17px; }
+  #bayern-heimspiel .bh-icon-button { background:#ffffff0d; padding:8px; min-width:36px; min-height:36px; border-radius:50%; display:grid; place-items:center; }
+  #bayern-heimspiel .bh-icon-button[aria-current=page] { background:#fff6f8; color:#7c1430; }
+  #bayern-heimspiel .bh-main { padding:0 27px 24px; }
+  #bayern-heimspiel .bh-page { min-height:420px; }
+  #bayern-heimspiel .bh-hero { position:relative; isolation:isolate; overflow:hidden; min-height:176px; display:flex; align-items:center; padding:25px 29px; border-radius:calc(var(--bh-round) + 3px); background:linear-gradient(108deg,#b11635,#e62b4c 64%,#b2183a); box-shadow:inset 0 1px 0 #ffeff44a,0 12px 26px #24001030; }
+  #bayern-heimspiel .bh-hero::before { content:""; position:absolute; inset:0; z-index:1; background:linear-gradient(90deg,#b11635ed 0%,#b11635b3 35%,#b1163500 72%); pointer-events:none; }
+  #bayern-heimspiel .bh-arena-art { position:absolute; z-index:0; width:85%; height:116%; right:-6%; bottom:-12%; object-fit:contain; object-position:center; opacity:.28; pointer-events:none; user-select:none; mask-image:linear-gradient(90deg,transparent,#000 42%); }
+  #bayern-heimspiel .bh-hero-text { position:relative; z-index:2; max-width:75%; }
+  #bayern-heimspiel .bh-kicker { font-size:11px; font-weight:500; text-transform:uppercase; letter-spacing:2.1px; color:#ffd3da; }
+  #bayern-heimspiel .bh-hero h2 { margin:7px 0 9px; color:#fff; font-size:clamp(29px,4.8cqw,42px); line-height:1.05; letter-spacing:-1.3px; font-weight:400; }
+  #bayern-heimspiel .bh-hero .bh-hero-line { font-size:12px; color:#ffe0e7; }
+  #bayern-heimspiel .bh-hero-crest { width:90px; height:90px; position:absolute; right:36px; top:20px; z-index:2; object-fit:contain; filter:drop-shadow(0 8px 12px #71091d55); }
+  #bayern-heimspiel .bh-hero-tag { position:absolute; z-index:2; bottom:19px; right:36px; font-size:11px; letter-spacing:2px; color:#ffdfe7; }
+  #bayern-heimspiel .bh-home-audio { display:flex; align-items:center; gap:10px; padding:12px 0 0; color:#ffe3ec; font-size:11px; }
+  #bayern-heimspiel .bh-home-audio>svg { width:17px; height:17px; }
+  #bayern-heimspiel .bh-home-audio-copy { display:flex; flex-direction:column; gap:2px; min-width:0; flex:1; }
+  #bayern-heimspiel .bh-home-audio-copy strong { font-size:12px; font-weight:500; }
+  #bayern-heimspiel #bh-home-hymn-status { overflow-wrap:anywhere; color:#ebc3d2; }
+  #bayern-heimspiel #bh-home-hymn-action { flex-shrink:0; background:#ffffff12; color:#fff0f5; border-radius:9px; padding:8px 11px; min-height:34px; font-size:11px; }
+  #bayern-heimspiel .bh-title { display:flex; gap:12px; justify-content:space-between; align-items:center; margin:22px 0 11px; }
+  #bayern-heimspiel .bh-title h3 { margin:0; color:#f4f6fc; font-size:13px; font-weight:500; letter-spacing:0; }
+  #bayern-heimspiel .bh-fixture-label { color:#efd2dc; font-size:11px; }
+  #bayern-heimspiel .bh-fixtures { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:11px; }
+  #bayern-heimspiel .bh-tv .bh-match { display:flex; flex-direction:column; gap:8px; min-width:0; text-align:left; min-height:105px; padding:13px 14px; background:#fff5f8; color:#65162e; border-radius:var(--bh-round); box-shadow:inset 0 -3px 0 #e8b6c5; transition:transform .15s,box-shadow .15s; }
+  #bayern-heimspiel .bh-match:hover { transform:translateY(-2px); box-shadow:0 0 0 2px var(--bh-accent),0 8px 16px #24001044; }
+  #bayern-heimspiel .bh-match-meta { display:flex; justify-content:space-between; gap:7px; color:#925264; font-size:11px; }
+  #bayern-heimspiel .bh-match-opponent { font-size:16px; font-weight:500; line-height:1.2; }
+  #bayern-heimspiel .bh-match-code { display:none; font-size:13px; font-weight:500; }
+  #bayern-heimspiel .bh-match time { color:#884154; font-size:12px; }
+  #bayern-heimspiel .bh-match time strong { color:#721a33; font-weight:500; }
+  #bayern-heimspiel .bh-fixture-source { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:6px 15px; color:#e6bdcc; font-size:11px; margin-top:8px; }
+  #bayern-heimspiel .bh-fixture-source a { color:#f7dee7; text-decoration:underline; text-underline-offset:3px; }
+  #bayern-heimspiel .bh-text-button { display:inline-flex; align-items:center; gap:5px; color:#f0d2dc; font-size:11px; background:transparent; padding:3px 0; min-height:24px; }
+  #bayern-heimspiel .bh-text-button:hover { color:#fff; }
+  #bayern-heimspiel .bh-text-button svg { width:13px; height:13px; }
+  #bayern-heimspiel .bh-apps-home { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:11px; }
+  #bayern-heimspiel .bh-app { min-width:0; }
+  #bayern-heimspiel .bh-app-open { display:flex; justify-content:center; align-items:center; width:100%; min-height:58px; border-radius:calc(var(--bh-round) - 5px); padding:9px 5px; background:#fff7fa; color:#6b1230; box-shadow:inset 0 -3px 0 #edb4c4,0 5px 11px #28000c22; transition:transform .15s,box-shadow .15s; font-size:16px !important; font-weight:500 !important; }
+  #bayern-heimspiel .bh-app-open:hover { transform:translateY(-3px); box-shadow:0 0 0 2px var(--bh-accent),0 10px 19px #0003; }
+  #bayern-heimspiel .bh-app-open[data-app=dazn] { color:#101719; background:#f0f1e5; letter-spacing:.7px; }
+  #bayern-heimspiel .bh-app-open[data-app=wow] { color:#087ba4; background:#fff7fa; font-size:21px !important; letter-spacing:-1px; }
+  #bayern-heimspiel .bh-app-open[data-app=netflix] { color:#d60e31; background:#fff7fa; font-size:14px !important; }
+  #bayern-heimspiel .bh-app-open[data-app=youtube] { color:#171b23; background:#f4f5f7; font-size:14px !important; }
+  #bayern-heimspiel .bh-app-open[data-app=prime] { color:#08769c; background:#fff7fa; font-size:14px !important; }
+  #bayern-heimspiel .bh-app-open[data-app=disney] { color:#1c2a67; background:#fff7fa; }
+  #bayern-heimspiel .bh-app-open[data-app=spotify] { color:#147d3e; background:#fff7fa; }
+  #bayern-heimspiel .bh-app-open[data-app=apple] { color:#161a24; background:#f3f4f6; font-size:23px !important; }
+  #bayern-heimspiel .bh-inputs-home { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:11px; }
+  #bayern-heimspiel .bh-source { position:relative; width:100%; display:flex; align-items:center; gap:12px; text-align:left; padding:15px 14px; min-height:77px; border-radius:var(--bh-round); background:#fff5f8; box-shadow:inset 0 -3px 0 #e8b6c5,0 5px 11px #28000c22; transition:background .15s,box-shadow .15s; }
+  #bayern-heimspiel .bh-source:hover { background:#fff; box-shadow:0 0 0 2px var(--bh-accent),0 7px 16px #24001044; }
+  #bayern-heimspiel .bh-source-icon { width:34px; height:34px; border-radius:11px; display:grid; place-items:center; color:#a51c40; background:#f4dce5; flex-shrink:0; }
+  #bayern-heimspiel .bh-source-icon svg { width:21px; height:21px; }
+  #bayern-heimspiel .bh-source-label { min-width:0; }
+  #bayern-heimspiel .bh-source-name { display:block; font-size:13px; font-weight:500; color:#64152e; overflow-wrap:anywhere; }
+  #bayern-heimspiel .bh-source-port { display:block; color:#824858; font-size:11px; margin-top:4px; }
+  #bayern-heimspiel .bh-source-state { display:inline-flex; gap:4px; align-items:center; }
+  #bayern-heimspiel .bh-source-state::before { content:""; width:4px; height:4px; border-radius:50%; background:#987a83; }
+  #bayern-heimspiel .bh-source-state[data-state=active]::before { background:#208466; }
+  #bayern-heimspiel .bh-source-state[data-state=standby]::before { background:#a36b26; }
+  #bayern-heimspiel .bh-quick { display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:19px; padding-top:15px; border-top:1px solid #cfdaef10; }
+  #bayern-heimspiel .bh-slogan { color:#f1cdd9; font-size:11px; letter-spacing:2px; }
+  #bayern-heimspiel .bh-quick-actions { display:flex; align-items:center; gap:17px; }
+  #bayern-heimspiel .bh-quick-actions button { display:flex; gap:6px; align-items:center; background:transparent; font-size:11px; padding:4px 0; color:#f1d6e0; }
+  #bayern-heimspiel .bh-quick-actions svg { width:14px; height:14px; }
+  #bayern-heimspiel .bh-page-heading { position:relative; margin:0 0 22px; padding:18px 21px; border-radius:var(--bh-round); background:linear-gradient(100deg,#b51c3e,#841330); border-bottom:3px solid #f8d8e2; }
+  #bayern-heimspiel .bh-page-heading h2, #bayern-heimspiel .bh-page-heading p { max-width:85%; }
+  #bayern-heimspiel .bh-page-crest { position:absolute; width:41px; height:41px; right:19px; top:20px; object-fit:contain; }
+  #bayern-heimspiel .bh-page-heading h2 { color:#fff; font-size:28px; font-weight:400; letter-spacing:-.8px; margin:0 0 5px; line-height:1.2; }
+  #bayern-heimspiel .bh-page-heading p { color:#f5d9e2; margin:0; font-size:12px; }
+  #bayern-heimspiel .bh-app-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:18px 15px; }
+  #bayern-heimspiel .bh-app-grid .bh-app-open { min-height:76px; }
+  #bayern-heimspiel .bh-app-meta { display:flex; align-items:center; justify-content:space-between; gap:7px; padding:9px 2px 0; font-size:11px; color:#d6ddec; }
+  #bayern-heimspiel .bh-favorite { display:flex; align-items:center; justify-content:center; min-height:28px; min-width:28px; border-radius:8px; padding:4px; background:#ffffff0b; color:#a8b7d1; }
+  #bayern-heimspiel .bh-favorite svg { width:14px; height:14px; }
+  #bayern-heimspiel .bh-favorite[aria-pressed=true] { color:#ff9bac; background:#b52b4c22; }
+  #bayern-heimspiel .bh-favorite[aria-pressed=true] svg { fill:#ff9bac; }
+  #bayern-heimspiel .bh-note { color:#b6c1d6; font-size:11px; margin:19px 0 0; min-height:16px; }
+  #bayern-heimspiel .bh-inputs-detail { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:13px; }
+  #bayern-heimspiel .bh-inputs-detail .bh-source { min-height:161px; padding:18px; flex-direction:column; align-items:flex-start; gap:20px; }
+  #bayern-heimspiel .bh-inputs-detail .bh-source-icon { width:48px; height:48px; background:#b4c8ef12; }
+  #bayern-heimspiel .bh-inputs-detail .bh-source-icon svg { width:28px; height:28px; }
+  #bayern-heimspiel .bh-inputs-detail .bh-source-name { font-size:18px; }
+  #bayern-heimspiel .bh-inputs-detail .bh-source-port { font-size:12px; }
+  #bayern-heimspiel .bh-inputs-detail .bh-source:first-child { background:linear-gradient(120deg,#ee4260,#bd1e40); box-shadow:inset 0 0 0 1px #fff1f570; }
+  #bayern-heimspiel .bh-inputs-detail .bh-source:first-child .bh-source-name { color:#fff; }
+  #bayern-heimspiel .bh-inputs-detail .bh-source:first-child .bh-source-port { color:#fff0f5; }
+  #bayern-heimspiel .bh-inputs-detail .bh-source:first-child .bh-source-icon { color:#fff; background:#ffffff1b; }
+  #bayern-heimspiel .bh-input-names { margin-top:24px; padding:19px; border-radius:var(--bh-round); background:#ffffff07; }
+  #bayern-heimspiel .bh-input-names h3 { margin:0 0 14px; font-weight:500; color:#f2f4fa; font-size:13px; }
+  #bayern-heimspiel .bh-field-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:13px; }
+  #bayern-heimspiel .bh-field { display:flex; flex-direction:column; gap:7px; min-width:0; color:#d9e0ef; font-size:12px; }
+  #bayern-heimspiel .bh-field input[type=text], #bayern-heimspiel .bh-field textarea, #bayern-heimspiel .bh-field select { min-width:0; width:100%; background:#fff5f8; border:1px solid #e9c0cf; border-radius:10px; min-height:38px; padding:9px 10px; color:#64172e; font-size:12px; }
+  #bayern-heimspiel .bh-field select option { background:#fff5f8; color:#64172e; }
+  #bayern-heimspiel .bh-field textarea { resize:vertical; min-height:72px; }
+  #bayern-heimspiel .bh-field select { padding-right:24px; }
+  #bayern-heimspiel .bh-field input[type=range] { width:100%; accent-color:var(--bh-accent); min-height:24px; margin:0; }
+  #bayern-heimspiel .bh-field input[type=file] { min-width:0; max-width:100%; width:100%; color:#f7dfe8; font-size:12px; padding:7px 0; }
+  #bayern-heimspiel .bh-field input[type=file]::file-selector-button { border:0; border-radius:8px; background:#fff5f8; color:#78132f; padding:10px 12px; margin-right:9px; font:inherit; }
+  #bayern-heimspiel .bh-hymn-file-name { overflow-wrap:anywhere; color:#ebcad5; font-size:11px; margin:6px 0 15px; }
+  #bayern-heimspiel .bh-hymn-default { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:7px 15px; margin:0 0 17px; color:#fff0f5; font-size:12px; }
+  #bayern-heimspiel .bh-hymn-default a { color:#edc9d8; font-size:11px; text-decoration:underline; text-underline-offset:3px; }
+  #bayern-heimspiel .bh-settings-layout { display:grid; grid-template-columns:165px minmax(0,1fr); gap:22px; }
+  #bayern-heimspiel .bh-settings-tabs { display:flex; flex-direction:column; gap:6px; align-items:stretch; }
+  #bayern-heimspiel .bh-settings-tabs button { display:flex; align-items:center; gap:9px; background:transparent; color:#f0d1db; padding:12px; text-align:left; border-radius:12px; font-size:12px; min-height:43px; }
+  #bayern-heimspiel .bh-settings-tabs button[aria-pressed=true] { background:#fff5f8; color:#78132f; box-shadow:inset 0 -3px 0 #e8b6c5; }
+  #bayern-heimspiel .bh-settings-tabs button svg { width:16px; height:16px; }
+  #bayern-heimspiel .bh-settings-panel { background:#3a0b1c90; border:1px solid #f1c7d42b; border-radius:var(--bh-round); padding:19px; min-width:0; }
+  #bayern-heimspiel .bh-settings-panel h3 { margin:0 0 4px; font-size:17px; color:#f8f9fc; font-weight:500; }
+  #bayern-heimspiel .bh-help { margin:0 0 16px; font-size:11px; color:#b6c3d9; }
+  #bayern-heimspiel .bh-option { display:flex; gap:16px; align-items:center; justify-content:space-between; margin-bottom:17px; font-size:12px; color:#e4e8f3; }
+  #bayern-heimspiel .bh-option label { display:flex; align-items:center; justify-content:space-between; gap:12px; width:100%; }
+  #bayern-heimspiel .bh-option small { display:block; color:#b6c3d9; font-size:11px; margin-top:3px; }
+  #bayern-heimspiel .bh-switch { appearance:none; width:37px; height:22px; flex-shrink:0; background:#4b5972; border-radius:16px; position:relative; margin:0; transition:background .15s; }
+  #bayern-heimspiel .bh-switch::before { content:""; position:absolute; width:16px; height:16px; border-radius:50%; left:3px; top:3px; background:#f5f7ff; transition:transform .15s; }
+  #bayern-heimspiel .bh-switch:checked { background:var(--bh-red); }
+  #bayern-heimspiel .bh-switch:checked::before { transform:translateX(15px); }
+  #bayern-heimspiel .bh-two-fields { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:13px; margin:13px 0; }
+  #bayern-heimspiel .bh-greeting-grid { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:17px; align-items:start; }
+  #bayern-heimspiel .bh-greeting-controls { display:flex; flex-direction:column; gap:14px; }
+  #bayern-heimspiel .bh-greeting-grid .bh-option { min-height:48px; margin-bottom:16px; }
+  #bayern-heimspiel .bh-greeting-grid .bh-action { max-width:100%; }
+  #bayern-heimspiel .bh-greeting-grid .bh-field textarea { min-height:108px; }
+  #bayern-heimspiel .bh-control-row { margin-top:14px; display:flex; gap:9px; align-items:center; flex-wrap:wrap; }
+  #bayern-heimspiel .bh-tv .bh-action { padding:10px 13px; display:inline-flex; align-items:center; justify-content:center; gap:7px; border-radius:10px; background:#fff5f8; color:#8a1735; font-size:12px; min-height:37px; }
+  #bayern-heimspiel .bh-action.secondary { background:#ffffff14; color:#ffe9f0; box-shadow:inset 0 0 0 1px #f1c7d42b; }
+  #bayern-heimspiel .bh-action svg { width:15px; height:15px; }
+  #bayern-heimspiel .bh-audio-status { min-height:16px; color:#d0bbcd; font-size:11px; margin:11px 0 0; }
+  #bayern-heimspiel .bh-divider { height:1px; background:#a8bad51c; margin:18px 0; }
+  #bayern-heimspiel .bh-scene-choices { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:9px; margin:17px 0 20px; }
+  #bayern-heimspiel .bh-scene-choice { background:#ffffff08; padding:7px; border-radius:12px; color:#c4cede; font-size:11px; box-shadow:inset 0 0 0 1px #becbe51a; }
+  #bayern-heimspiel .bh-scene-choice[aria-pressed=true] { box-shadow:inset 0 0 0 2px var(--bh-accent); color:#fff; }
+  #bayern-heimspiel .bh-scene-swatch { height:49px; display:block; border-radius:8px; margin-bottom:7px; }
+  #bayern-heimspiel .bh-scene-swatch.arena { background:linear-gradient(145deg,#500f27 45%,#af1a3c 46%,#e83255); }
+  #bayern-heimspiel .bh-scene-swatch.red { background:linear-gradient(145deg,#9b1436,#df2c50 65%,#fff1f6); }
+  #bayern-heimspiel .bh-scene-swatch.night { background:linear-gradient(145deg,#260b1c,#651632); }
+  #bayern-heimspiel .bh-overlay { position:absolute; inset:0; z-index:20; min-height:100%; background:radial-gradient(ellipse at 80% 10%,#8b1b3d,transparent 65%),#310c1f; padding:26px; display:flex; flex-direction:column; }
+  #bayern-heimspiel .bh-overlay-top { display:flex; align-items:center; justify-content:space-between; gap:12px; font-size:11px; color:#b3c1d8; }
+  #bayern-heimspiel .bh-overlay-back { display:flex; align-items:center; gap:7px; min-height:36px; padding:9px 12px; border-radius:11px; background:#ffffff10; color:#e8edf8; font-size:12px; }
+  #bayern-heimspiel .bh-overlay-center { text-align:center; margin:auto 0; padding:30px 8px; }
+  #bayern-heimspiel .bh-overlay-icon { display:grid; place-items:center; width:78px; height:78px; border-radius:24px; margin:0 auto 22px; background:#fff3f514; color:#ffd0d9; }
+  #bayern-heimspiel .bh-overlay-icon svg { width:37px; height:37px; }
+  #bayern-heimspiel .bh-overlay-title { color:#fff; font-size:clamp(28px,5cqw,43px); font-weight:400; letter-spacing:-1px; overflow-wrap:anywhere; }
+  #bayern-heimspiel .bh-overlay-text { color:#eccdd9; margin-top:10px; font-size:12px; white-space:pre-line; }
+  #bayern-heimspiel .bh-overlay-foot { font-size:11px; color:#a8b9d4; text-align:center; }
+  #bayern-heimspiel .bh-overlay[data-mode=ambient] { background:radial-gradient(ellipse at 52% 90%,#c5325760,transparent 65%),#2d0b1e; }
+  #bayern-heimspiel .bh-overlay[data-mode=ambient] .bh-overlay-icon { display:none; }
+  #bayern-heimspiel .bh-ambient-crest { width:69px; height:69px; object-fit:contain; margin-bottom:24px; }
+  #bayern-heimspiel .bh-overlay[data-mode=ambient] .bh-overlay-title { font-size:clamp(62px,13cqw,103px); font-weight:400; letter-spacing:-5px; font-variant-numeric:tabular-nums; }
+  #bayern-heimspiel .bh-overlay[data-mode=ambient] .bh-overlay-text { letter-spacing:4px; font-size:12px; }
+  #bayern-heimspiel .bh-caption { color:light-dark(#555e6d,#b7c1d3); font:400 12px/1.4 "Segoe UI",sans-serif; margin:13px 2px 0; }
+  #bayern-heimspiel .bh-hidden-status .bh-source-state { display:none; }
+  #bayern-heimspiel .bh-empty { font-size:12px; color:#bcc7db; padding:16px 0; grid-column:1/-1; }
+  #bayern-heimspiel .bh-help, #bayern-heimspiel .bh-note, #bayern-heimspiel .bh-option small, #bayern-heimspiel .bh-field, #bayern-heimspiel .bh-app-meta { color:#ebcad5; }
+  
+  
+  @media(pointer:coarse) {
+    #bayern-heimspiel .bh-nav button, #bayern-heimspiel .bh-icon-button, #bayern-heimspiel .bh-text-button, #bayern-heimspiel .bh-favorite, #bayern-heimspiel .bh-quick-actions button { min-height:44px; }
+    #bayern-heimspiel .bh-icon-button, #bayern-heimspiel .bh-favorite { min-width:44px; }
+    #bayern-heimspiel #bh-home-hymn-action, #bayern-heimspiel .bh-control-row button { min-height:44px; }
+  }
+  @media(prefers-reduced-motion:reduce) { #bayern-heimspiel .bh-tv * { transition:none !important; } }

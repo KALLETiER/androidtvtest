@@ -1,0 +1,113 @@
+/* Bayern Lounge: own implementation inspired by arn0-tv's spacious two-row layout.
+   One static Arena layer; no live glow or backdrop blur. Chromium 83 compatible. */
+@font-face{font-family:"Heimspiel Manrope";src:url("brands/manrope.woff2") format("woff2");font-weight:200 800;font-display:swap}
+
+#bayern-heimspiel .bh-tv[data-template="lounge"]{--bh-ink:#f5f5f7;--bh-muted:#9c9da8;--bh-accent:#fff;background:#0b0e13;color:#f5f5f7;font-family:"Heimspiel Manrope",Roboto,Arial,sans-serif}
+#bayern-heimspiel [data-template="lounge"] .bh-header{height:76px;min-height:76px;padding:12px 96px;border-bottom:1px solid #ffffff0a;background:transparent}
+#bayern-heimspiel [data-template="lounge"] .bh-brand img{width:42px;height:42px;margin-right:13px}
+#bayern-heimspiel [data-template="lounge"] .bh-brand strong{font-size:16px;font-weight:650;letter-spacing:1.2px;color:#d3d4da}
+#bayern-heimspiel [data-template="lounge"] .bh-brand small{font-size:12px;letter-spacing:2px;margin-top:2px;color:#777b88}
+#bayern-heimspiel [data-template="lounge"] .bh-nav{margin-left:55px}
+#bayern-heimspiel [data-template="lounge"] .bh-nav button{font-size:21px;min-height:44px;padding:9px 17px;margin-right:9px;color:#8c909d}
+#bayern-heimspiel [data-template="lounge"] .bh-nav button[aria-current="page"]{color:#f7f7f9;box-shadow:inset 0 -2px #d72441}
+#bayern-heimspiel [data-template="lounge"] .bh-status{font-size:22px}
+#bayern-heimspiel [data-template="lounge"] .bh-clock{margin-right:24px;color:#a9adb8}
+#bayern-heimspiel [data-template="lounge"] .bh-icon-button{width:43px;height:43px;min-width:43px;background:transparent}
+#bayern-heimspiel [data-template="lounge"] .bh-icon-button img.bh-symbol{width:23px;height:23px;min-width:23px;opacity:.65}
+#bayern-heimspiel [data-template="lounge"] .bh-main{padding:24px 96px 26px;scrollbar-color:#3c3942 #0b0e13}
+#bayern-heimspiel [data-template="lounge"] [data-view="home"]{position:relative;min-height:954px}
+
+/* The clock and personal greeting sit in the quiet left half of the room. */
+#bayern-heimspiel [data-template="lounge"] .bh-hero{height:330px;min-height:330px;padding:0;position:relative;overflow:visible;background:transparent;isolation:isolate}
+#bayern-heimspiel [data-template="lounge"] .bh-hero-text{display:flex;flex-direction:column;align-items:flex-start;position:relative;z-index:2;max-width:720px;padding-top:8px}
+#bayern-heimspiel [data-template="lounge"] .bh-lounge-time{display:block;order:0;font-size:94px;line-height:1.08;font-weight:300;letter-spacing:-4px;font-variant-numeric:tabular-nums;color:#f6f6f8}
+#bayern-heimspiel [data-template="lounge"] .bh-lounge-date{display:block;order:1;font-size:23px;line-height:1.5;font-weight:450;letter-spacing:.2px;color:#a5a8b3;margin-top:4px}
+#bayern-heimspiel [data-template="lounge"] .bh-kicker{order:2;margin-top:25px;font-size:14px;line-height:1.4;letter-spacing:3px;text-transform:uppercase;color:#bc7e8d}
+#bayern-heimspiel [data-template="lounge"] .bh-hero h2{order:3;font-size:69px;line-height:1.08;letter-spacing:-2.7px;font-weight:550;margin:7px 0 8px;color:#f5f5f7;white-space:nowrap}
+#bayern-heimspiel [data-template="lounge"] .bh-hero .bh-hero-line{order:4;font-size:22px;line-height:1.4;color:#9297a5}
+#bayern-heimspiel [data-template="lounge"] .bh-arena-art{position:absolute;z-index:0;right:-125px;top:88px;bottom:auto;width:1160px;height:345px;object-fit:contain;object-position:right center;opacity:.37;filter:brightness(.48) sepia(1) saturate(8) hue-rotate(306deg);mask-image:none;-webkit-mask-image:none;pointer-events:none}
+
+/* A compact, explicitly dated fixture card replaces the full schedule on Home. */
+#bayern-heimspiel [data-template="lounge"] .bh-lounge-match{display:flex;flex-direction:column;position:absolute;z-index:2;right:2px;top:17px;width:362px;min-height:122px;padding:7px 0 9px 22px;border-left:2px solid #bc233e;border-radius:0;background:transparent;text-decoration:none;color:#e7e7ed}
+#bayern-heimspiel [data-template="lounge"] .bh-lounge-match:focus{position:absolute}
+#bayern-heimspiel [data-template="lounge"] .bh-lounge-match-kicker{display:block;font-size:12px;font-weight:650;line-height:1.5;letter-spacing:2px;text-transform:uppercase;color:#bd8e9a}
+#bayern-heimspiel [data-template="lounge"] .bh-lounge-match-title{display:block;margin-top:7px;font-size:25px;font-weight:550;line-height:1.25;letter-spacing:-.45px;color:#e9e8ed}
+#bayern-heimspiel [data-template="lounge"] .bh-lounge-match-meta{display:block;margin-top:8px;font-size:18px;line-height:1.4;color:#a3a3af}
+#bayern-heimspiel [data-template="lounge"] .bh-lounge-match-note{display:block;margin-top:8px;font-size:12px;line-height:1.4;color:#a8aebb}
+#bayern-heimspiel [data-template="lounge"] [data-view="home"] .bh-fixture-section{display:none}
+#bayern-heimspiel [data-template="lounge"] .bh-home-audio{top:291px;right:0;height:30px;z-index:3;font-size:15px;color:#787c8b}
+#bayern-heimspiel [data-template="lounge"] .bh-home-audio>.bh-symbol{width:17px;height:17px;min-width:17px;opacity:.6;margin-right:7px}
+#bayern-heimspiel [data-template="lounge"] .bh-home-audio-copy strong{font-size:15px;margin-right:12px;color:#878a98}
+#bayern-heimspiel [data-template="lounge"] #bh-home-hymn-action{font-size:15px;min-height:30px;padding:5px 10px;background:#ffffff06;color:#adb0bc}
+
+/* Equal cards, measured logo areas and captions outside the artwork. */
+#bayern-heimspiel [data-template="lounge"] [data-view="home"]>.bh-title{margin:17px 0 16px;min-height:30px}
+#bayern-heimspiel [data-template="lounge"] .bh-title h3{font-size:19px;font-weight:550;line-height:1.5;letter-spacing:2px;text-transform:uppercase;color:#b1b3bd}
+#bayern-heimspiel [data-template="lounge"] .bh-text-button{font-size:17px;min-height:30px;color:#9296a4}
+#bayern-heimspiel [data-template="lounge"] .bh-text-button .bh-symbol{width:17px;height:17px;min-width:17px;margin-left:5px}
+#bayern-heimspiel [data-template="lounge"] .bh-apps-home{height:201px;gap:25px;grid-template-columns:repeat(6,minmax(0,1fr))}
+#bayern-heimspiel .bh-tv[data-template="lounge"] .bh-apps-home .bh-app-open{height:201px;min-height:201px}
+#bayern-heimspiel [data-template="lounge"] .bh-apps-home .bh-app-art{height:151px;min-height:151px;border-radius:var(--bh-round);background:#20242d;box-shadow:inset 0 0 0 1px #ffffff08;transition:transform .12s ease-out,box-shadow .12s ease-out}
+#bayern-heimspiel [data-template="lounge"] .bh-app-open .bh-app-label{font-size:21px;line-height:29px;font-weight:450;color:#999daa;margin:15px 3px 0}
+#bayern-heimspiel [data-template="lounge"] .bh-app-art[data-lounge-logo="true"] .bh-app-banner,
+#bayern-heimspiel [data-template="lounge"] .bh-app-art[data-lounge-logo="true"] .bh-app-icon,
+#bayern-heimspiel [data-template="lounge"] .bh-app-art[data-lounge-logo="true"] .bh-app-wordmark{display:none}
+#bayern-heimspiel [data-template="lounge"] .bh-app-art img.bh-app-logo{display:block;width:65%;height:57%;max-width:none;object-fit:contain;border-radius:0}
+#bayern-heimspiel [data-template="lounge"] .bh-app-open[data-brand="netflix"] .bh-app-art{background:#151517}
+#bayern-heimspiel [data-template="lounge"] .bh-app-open[data-brand="netflix"] img.bh-app-logo{width:55%;height:60%}
+#bayern-heimspiel [data-template="lounge"] .bh-app-open[data-brand="youtube"] .bh-app-art{background:#e62221}
+#bayern-heimspiel [data-template="lounge"] .bh-app-open[data-brand="youtube"] .bh-app-wordmark{color:#fff}
+#bayern-heimspiel [data-template="lounge"] .bh-app-open[data-brand="prime"] .bh-app-art{background:#0d5379}
+#bayern-heimspiel [data-template="lounge"] .bh-app-open[data-brand="disney"] .bh-app-art{background:#101c50}
+#bayern-heimspiel [data-template="lounge"] .bh-app-open[data-brand="dazn"] .bh-app-art{background:#ecf18b}
+#bayern-heimspiel [data-template="lounge"] .bh-app-open[data-brand="dazn"] .bh-app-wordmark{color:#111a1c}
+#bayern-heimspiel [data-template="lounge"] .bh-app-open[data-brand="spotify"] .bh-app-art{background:#15191a}
+#bayern-heimspiel [data-template="lounge"] .bh-app-open[data-brand="wow"] .bh-app-art{background:#1264cc}
+#bayern-heimspiel [data-template="lounge"] .bh-app-open[data-brand="appletv"] .bh-app-art{background:#171719}
+#bayern-heimspiel [data-template="lounge"] .bh-app-add .bh-app-art{background:#161b24;box-shadow:inset 0 0 0 1px #ffffff10;color:#767e8e}
+#bayern-heimspiel [data-template="lounge"] .bh-app-open:focus .bh-app-art{transform:scale(1.055);box-shadow:0 0 0 4px #fff,0 14px 28px #0008}
+#bayern-heimspiel [data-template="lounge"] .bh-app-open:focus .bh-app-label{color:#fff}
+
+/* Consoles retain their real HDMI IDs, status and names from the Android bridge. */
+#bayern-heimspiel [data-template="lounge"] .bh-inputs-home{height:160px;gap:25px;grid-template-columns:repeat(3,minmax(0,1fr))}
+#bayern-heimspiel [data-template="lounge"] .bh-inputs-home>.bh-source{grid-column:auto}
+#bayern-heimspiel .bh-tv[data-template="lounge"] .bh-inputs-home .bh-source{height:160px;min-height:160px;padding:28px 30px;border-radius:var(--bh-round);background:#191f2b;box-shadow:inset 0 0 0 1px #ffffff07;transition:transform .12s ease-out,box-shadow .12s ease-out}
+#bayern-heimspiel [data-template="lounge"] .bh-source-label{min-width:0;flex:1}
+#bayern-heimspiel [data-template="lounge"] .bh-source-icon{width:72px;height:78px;min-width:72px;flex-shrink:0;margin-right:26px;background:transparent;border-radius:0;color:#d2d6df}
+#bayern-heimspiel [data-template="lounge"] .bh-source-icon .bh-symbol{width:42px;height:42px;min-width:42px;opacity:.65}
+#bayern-heimspiel [data-template="lounge"] .bh-source-icon img.bh-device-logo{display:block;width:66px;height:66px;object-fit:contain;filter:brightness(0) invert(1);opacity:.92}
+#bayern-heimspiel [data-template="lounge"] .bh-source-icon[data-device] .bh-symbol{display:none}
+#bayern-heimspiel [data-template="lounge"] .bh-source-name{font-size:29px;line-height:1.25;font-weight:550;letter-spacing:-.5px;color:#e6e8ee}
+#bayern-heimspiel [data-template="lounge"] .bh-source-port{font-size:19px;line-height:1.5;color:#8d95a7;margin-top:9px}
+#bayern-heimspiel [data-template="lounge"] .bh-source-state{font-size:16px;line-height:1.5;margin-left:14px;color:#929bab}
+#bayern-heimspiel [data-template="lounge"] .bh-source-state::before{width:7px;height:7px;margin-right:4px}
+#bayern-heimspiel [data-template="lounge"] .bh-source-state[data-state="active"]::before{background:#67d39a}
+#bayern-heimspiel [data-template="lounge"] .bh-source:focus{transform:scale(1.025);outline:0;box-shadow:0 0 0 4px #fff,0 14px 28px #0008}
+
+#bayern-heimspiel [data-template="lounge"] .bh-quick{margin-top:29px;padding-top:17px;min-height:48px;border-top:1px solid #ffffff0b}
+#bayern-heimspiel [data-template="lounge"] .bh-slogan{font-size:14px;letter-spacing:3px;color:#6a707f}
+#bayern-heimspiel [data-template="lounge"] .bh-quick-actions button{font-size:16px;line-height:1.5;margin-left:31px;min-height:32px;color:#858b9a}
+#bayern-heimspiel [data-template="lounge"] .bh-quick-actions .bh-symbol{width:18px;height:18px;min-width:18px;margin-right:9px;opacity:.5}
+
+/* Secondary screens keep the same dark palette and the existing working TV controls. */
+#bayern-heimspiel [data-template="lounge"] .bh-page-heading{background:#171c26;border:1px solid #ffffff07;box-shadow:none;border-radius:18px}
+#bayern-heimspiel [data-template="lounge"] .bh-page-heading h2{color:#f0f1f5}
+#bayern-heimspiel [data-template="lounge"] .bh-page-heading p,
+#bayern-heimspiel [data-template="lounge"] .bh-help,
+#bayern-heimspiel [data-template="lounge"] .bh-note{color:#979fae}
+#bayern-heimspiel [data-template="lounge"] .bh-settings-panel,
+#bayern-heimspiel [data-template="lounge"] .bh-input-names{background:#131923;border-color:#ffffff09;border-radius:18px}
+#bayern-heimspiel [data-template="lounge"] .bh-settings-tabs button{color:#929baa}
+#bayern-heimspiel [data-template="lounge"] .bh-settings-tabs button[aria-pressed="true"]{color:#f8f8fa;background:#232936;box-shadow:inset 3px 0 #c42943}
+#bayern-heimspiel [data-template="lounge"] .bh-field,
+#bayern-heimspiel [data-template="lounge"] .bh-option,
+#bayern-heimspiel [data-template="lounge"] .bh-option small{color:#a7aebb}
+#bayern-heimspiel [data-template="lounge"] .bh-field input[type="text"],
+#bayern-heimspiel [data-template="lounge"] .bh-field textarea,
+#bayern-heimspiel [data-template="lounge"] .bh-field select,
+#bayern-heimspiel [data-template="lounge"] .bh-field select option{background:#202633;color:#f0f2f7;border-color:#3c4659}
+#bayern-heimspiel .bh-tv[data-template="lounge"] .bh-action{background:#303746;color:#f3f4f7;border-color:#ffffff0c}
+#bayern-heimspiel .bh-tv[data-template="lounge"] .bh-action.secondary{background:#ffffff05;color:#b5bdcb;border-color:#ffffff16}
+#bayern-heimspiel [data-template="lounge"] .bh-overlay{background:#0c1119}
+
+@media(prefers-reduced-motion:reduce){#bayern-heimspiel [data-template="lounge"] .bh-app-art,#bayern-heimspiel [data-template="lounge"] .bh-source{transition:none}}

@@ -1,0 +1,62 @@
+{
+  "project": "Lucide",
+  "version": "0.468.0",
+  "repository": "https://github.com/lucide-icons/lucide/tree/0.468.0",
+  "assets": [
+    {
+      "file": "settings-2.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/0.468.0/icons/settings-2.svg",
+      "sha256": "461a8c978685f762e024c23647230f59f00bcae599a025645829435cadb6f3a4"
+    },
+    {
+      "file": "hdmi-port.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/0.468.0/icons/hdmi-port.svg",
+      "sha256": "9fed68b7520d577d41a254962a79c5c06a5b5c619a45c2cb52ab3ed42421bb23"
+    },
+    {
+      "file": "monitor.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/0.468.0/icons/monitor.svg",
+      "sha256": "d1a443233345724859de8e4fb48968ba91e885e12ddbd710701548bd91b39428"
+    },
+    {
+      "file": "volume-2.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/0.468.0/icons/volume-2.svg",
+      "sha256": "fb404f9c128a0579de67b399177631e5edb3502fdc247ceb30e8b15754b46071"
+    },
+    {
+      "file": "square.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/0.468.0/icons/square.svg",
+      "sha256": "bd979354f0ab184b95cecf03eedefe40c2dc65830ac6d7e60017b2b25a354acb"
+    },
+    {
+      "file": "calendar-days.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/0.468.0/icons/calendar-days.svg",
+      "sha256": "b7be7b5d7ec5d391cb45e30d35782321bdf108b91c939bf4f42885754177c80b"
+    },
+    {
+      "file": "chevron-right.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/0.468.0/icons/chevron-right.svg",
+      "sha256": "2758143d7b2434e4aa7307dfd34405c87909ff4052f21b5f3f40d45224b4f19b"
+    },
+    {
+      "file": "arrow-left.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/0.468.0/icons/arrow-left.svg",
+      "sha256": "c5f4b88076108eb1a0d95336e1aa7e7bb1419a3a92af96f6247d88cd3456f933"
+    },
+    {
+      "file": "moon-star.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/0.468.0/icons/moon-star.svg",
+      "sha256": "557ce9e708c0ab123698171cfac194a13b67550f658a14382c3f0f432e4dc8f7"
+    },
+    {
+      "file": "palette.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/0.468.0/icons/palette.svg",
+      "sha256": "fbe81d6b4e00ee35dfc9100ddeaaee72e2e1aeb4acb16568b768c316588d104d"
+    },
+    {
+      "file": "LICENSE",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/0.468.0/LICENSE",
+      "sha256": "1e7290b35280a048667bbf0ebabac1c7fd52a75300e8b2946ac165715997f2bc"
+    }
+  ]
+}

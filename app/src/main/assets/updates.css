@@ -1,0 +1,11 @@
+#bayern-heimspiel .bh-update-version{font-size:23px;margin:22px 0 16px;color:inherit}
+#bayern-heimspiel .bh-update-card{padding:18px 22px;border:1px solid #ffffff18;border-radius:14px;background:#ffffff05}
+#bayern-heimspiel #bh-update-status{margin:0;font-size:24px;line-height:1.5;white-space:pre-line}
+#bayern-heimspiel #bh-update-notes{margin:16px 0 0;font-size:21px;line-height:1.5;white-space:pre-line;overflow-wrap:break-word}
+#bayern-heimspiel #bh-update-progress{display:block;width:100%;height:12px;margin:18px 0 4px;accent-color:#ed3157}
+#bayern-heimspiel .bh-update-hint{margin-top:22px}
+#bayern-heimspiel #bh-update-source{display:block;width:100%;margin-top:13px;padding:15px 18px;min-height:62px;border-radius:12px;border:1px solid #ffffff25;background:#ffffff09;color:inherit;font:inherit;font-size:23px;box-sizing:border-box}
+#bayern-heimspiel #bh-update-source::placeholder{color:inherit;opacity:.5}
+#bayern-heimspiel [data-template=apple] .bh-update-card{background:#ffffffa6;border-color:#282a3118}
+#bayern-heimspiel [data-template=apple] #bh-update-source{background:#fff;border-color:#282a3125}
+#bayern-heimspiel [data-template=redwhite] .bh-update-card{background:#ffffff08;border-color:#ffffff20}

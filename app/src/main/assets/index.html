@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self' data:; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'none'">
+<title>Bayern Heimspiel</title><link rel="stylesheet" href="launcher.css"><link rel="stylesheet" href="tv.css"><link rel="stylesheet" href="premium.css"><link rel="stylesheet" href="templates.css"><link rel="stylesheet" href="template-redwhite.css"><link rel="stylesheet" href="template-apple.css"><link rel="stylesheet" href="template-lounge.css"><link rel="stylesheet" href="template-rotglut.css"><link rel="stylesheet" href="updates.css">
+</head><body><div id="tv-stage"><div id="bayern-heimspiel">
+  <div class="bh-tv" aria-label="Bayern Heimspiel" data-scene="arena" data-template="dark">
+    <header class="bh-header">
+      <div class="bh-brand"><img src="bayern-crest.png" alt="Wappen des FC Bayern München"><span><strong>FC BAYERN MÜNCHEN</strong><small>DEIN HEIMSPIEL</small></span></div>
+      <nav class="bh-nav" aria-label="Hauptnavigation"><button type="button" class="cursor-interaction" data-page="home" aria-current="page">Start</button><button type="button" class="cursor-interaction" data-page="apps">Apps</button><button type="button" class="cursor-interaction" data-page="inputs">Eingänge</button></nav>
+      <div class="bh-status"><span class="bh-clock">20:15</span><button type="button" class="bh-icon-button cursor-interaction" data-page="settings" aria-label="Einstellungen"><span class="bh-symbol" aria-hidden="true">⚙</span></button></div>
+    </header>
+    <main class="bh-main">
+      <section class="bh-page" data-view="home" aria-label="Startbildschirm">
+        <div class="bh-hero"><img class="bh-arena-art" src="allianz-arena-schraffur.webp" alt="" aria-hidden="true"><div class="bh-hero-text"><div class="bh-kicker">Dahoam ist hier.</div><time class="bh-lounge-time bh-lounge-only">20:15</time><span class="bh-lounge-date bh-lounge-only"></span><h2>Servus André!</h2><div class="bh-hero-line">Dein Heimspiel beginnt.</div></div><a class="bh-lounge-match bh-lounge-only cursor-interaction" href="https://fcbayern.com/de/match-center/matchplan/profis" aria-label="Bayern-Spielplan öffnen"><span class="bh-lounge-match-kicker">Nächster Anpfiff</span><strong class="bh-lounge-match-title"></strong><span class="bh-lounge-match-meta"></span><small class="bh-lounge-match-note">Stand 28.10.2026 · kein Live-Spielplan</small></a></div>
+        <div class="bh-home-audio"><span class="bh-symbol" aria-hidden="true">♪</span><div class="bh-home-audio-copy"><strong>Torhymne beim Start</strong><span id="bh-home-hymn-status" aria-live="polite">Bereit · 0:00–0:05</span></div><button type="button" id="bh-home-hymn-action" class="cursor-interaction">Abspielen</button></div>
+        <div class="bh-title"><h3>Deine Apps</h3><button type="button" class="bh-text-button cursor-interaction" data-page="apps">Alle Apps<span class="bh-symbol" aria-hidden="true">›</span></button></div>
+        <div class="bh-apps-home" aria-label="Lieblingsapps"></div>
+        <div class="bh-title"><h3>Deine Eingänge</h3><button type="button" class="bh-text-button cursor-interaction" data-page="inputs">Alle Eingänge<span class="bh-symbol" aria-hidden="true">›</span></button></div>
+        <div class="bh-inputs-home" aria-label="Verfügbare TV-Eingänge"></div>
+        <section class="bh-fixture-section" aria-label="Die nächsten drei Bayern-Spiele">
+          <div class="bh-title"><h3>Bayern-Spielplan</h3><span class="bh-fixture-label">Stand: 28.10.2026 · Profis Männer</span></div>
+          <div class="bh-fixtures">
+            <button type="button" class="bh-match cursor-interaction" data-match="magdeburg" aria-label="FC Bayern gegen 1. FC Magdeburg, DFB-Pokal, Heimspiel, Mittwoch 28. Oktober 2026 um 20:45 Uhr"><span class="bh-match-meta"><span>DFB-Pokal</span><span class="bh-match-location">Heimspiel</span></span><span class="bh-match-opponent">1. FC Magdeburg</span><span class="bh-match-code">FCB – FCM</span><time datetime="2026-10-28T20:45:00+01:00">Mi., 28.10. <strong>20:45 Uhr</strong></time></button>
+            <button type="button" class="bh-match cursor-interaction" data-match="dortmund" aria-label="FC Bayern gegen Borussia Dortmund, Bundesliga, Heimspiel, Samstag 31. Oktober 2026 um 18:30 Uhr"><span class="bh-match-meta"><span>Bundesliga</span><span class="bh-match-location">Heimspiel</span></span><span class="bh-match-opponent">Borussia Dortmund</span><span class="bh-match-code">FCB – BVB</span><time datetime="2026-10-31T18:30:00+01:00">Sa., 31.10. <strong>18:30 Uhr</strong></time></button>
+            <button type="button" class="bh-match cursor-interaction" data-match="atletico" aria-label="Atlético Madrid gegen FC Bayern, Champions League, auswärts, Dienstag 3. November 2026 um 21 Uhr"><span class="bh-match-meta"><span>Champions League</span><span class="bh-match-location">Auswärts</span></span><span class="bh-match-opponent">Atlético Madrid</span><span class="bh-match-code">ATM – FCB</span><time datetime="2026-11-03T21:00:00+01:00">Di., 03.11. <strong>21:00 Uhr</strong></time></button>
+          </div>
+          <div class="bh-fixture-source"><a href="https://fcbayern.com/de/match-center/matchplan/profis" target="_blank" rel="noopener noreferrer">Offizieller Spielplan<span class="bh-symbol" aria-hidden="true">›</span></a><span>Deutsche Zeit</span></div>
+        </section>
+        <footer class="bh-quick"><span class="bh-slogan">MIA SAN MIA.</span><div class="bh-quick-actions"><button type="button" class="cursor-interaction" data-shortcut="greeting"><span class="bh-symbol" aria-hidden="true">≋</span>Begrüßung</button><button type="button" class="cursor-interaction" data-shortcut="design"><span class="bh-symbol" aria-hidden="true">◈</span>Design</button><button type="button" class="cursor-interaction" data-ambient><span class="bh-symbol" aria-hidden="true">☾</span>Ambient</button></div></footer>
+      </section>
+      <section class="bh-page" data-view="apps" aria-label="Apps und Favoriten" hidden>
+        <div class="bh-page-heading"><img class="bh-page-crest" src="bayern-crest.png" alt="" aria-hidden="true"><h2>Deine Apps.</h2><p>Bis zu sechs Favoriten stehen direkt auf deiner Startseite.</p></div>
+        <div class="bh-app-grid" aria-label="App-Übersicht"></div>
+        <p class="bh-note" id="bh-favorite-status" aria-live="polite">Mit dem Stern wählst du deine Stammelf.</p>
+      </section>
+      <section class="bh-page" data-view="inputs" aria-label="Eingänge" hidden>
+        <div class="bh-page-heading"><img class="bh-page-crest" src="bayern-crest.png" alt="" aria-hidden="true"><h2>Deine TV-Eingänge.</h2><p>Die vom Fernseher gemeldeten Eingänge und deine eigenen Namen.</p></div>
+        <div class="bh-inputs-detail" aria-label="Eingänge auswählen"></div>
+        <section class="bh-input-names" aria-label="Eigene Gerätenamen"><h3>So heißen deine Geräte</h3><div class="bh-field-grid" id="bh-input-name-fields"></div></section>
+      </section>
+      <section class="bh-page" data-view="settings" aria-label="Einstellungen" hidden>
+        <div class="bh-page-heading"><img class="bh-page-crest" src="bayern-crest.png" alt="" aria-hidden="true"><h2>Ganz dein Heimspiel.</h2><p>Begrüßung, Klang und Design nach deinem Geschmack.</p></div>
+        <div class="bh-settings-layout">
+          <nav class="bh-settings-tabs" aria-label="Einstellungsbereiche"><button type="button" class="cursor-interaction" data-settings="greeting" aria-pressed="true"><span class="bh-symbol" aria-hidden="true">≋</span>Begrüßung</button><button type="button" class="cursor-interaction" data-settings="tones" aria-pressed="false"><span class="bh-symbol" aria-hidden="true">♪</span>Töne</button><button type="button" class="cursor-interaction" data-settings="design" aria-pressed="false"><span class="bh-symbol" aria-hidden="true">◈</span>Design</button><button type="button" class="cursor-interaction" data-settings="ambient" aria-pressed="false"><span class="bh-symbol" aria-hidden="true">☾</span>Ambient</button><button type="button" class="cursor-interaction" data-settings="updates" aria-pressed="false"><span class="bh-symbol" aria-hidden="true">↓</span>Updates</button></nav>
+          <section class="bh-settings-panel" data-settings-view="greeting" aria-label="Begrüßung und Ton">
+            <h3>Servus André, du bist dahoam.</h3><p class="bh-help">Deine persönliche Begrüßung auf der Startseite.</p>
+            <div class="bh-greeting-grid"><div><div class="bh-option"><label for="bh-greeting-enabled"><span>Begrüßungsstimme<small>Ein kurzer Gruß zur Rückkehr.</small></span><input id="bh-greeting-enabled" class="bh-switch cursor-interaction" type="checkbox" checked></label></div>
+            <label class="bh-field">Dein Begrüßungstext<textarea id="bh-greeting-text" maxlength="180" rows="3">Servus André! Schön, dass du da bist. Mia san mia!</textarea></label>
+            <div class="bh-control-row"><button type="button" class="bh-action cursor-interaction" id="bh-speech-preview"><span class="bh-symbol" aria-hidden="true">♪</span>Begrüßung anhören</button><button type="button" class="bh-action secondary cursor-interaction" id="bh-audio-stop"><span class="bh-symbol" aria-hidden="true">■</span>Stoppen</button></div><p class="bh-audio-status" id="bh-audio-status" aria-live="polite">Deine Begrüßung folgt der Torhymne. Ohne Hymne begrüßt dich die Stimme direkt.</p></div>
+            <div class="bh-greeting-controls"><p class="bh-help">Deutsche Systemstimme des Fernsehers</p><label class="bh-field">Sprechstil<select id="bh-speaking-style"><option value="warm">Herzlich</option><option value="calm">Entspannt</option><option value="lively">Lebhaft</option></select></label><label class="bh-field">Wann begrüßen?<select id="bh-frequency"><option value="pause">Nach längerer Pause</option><option value="daily">Einmal täglich</option><option value="always">Bei jeder Rückkehr</option></select></label><label class="bh-field">Lautstärke <span id="bh-volume-label">30 %</span><input id="bh-volume" type="range" min="0" max="100" step="5" value="30"></label></div></div>
+          </section>
+          <section class="bh-settings-panel" data-settings-view="tones" aria-label="Startklang einstellen" hidden>
+            <h3>Deine Torhymne zum Heimspiel.</h3><p class="bh-help">Der integrierte Ausschnitt von 0:00 bis 0:05 spielt beim Öffnen der Startseite. Eine aktivierte Begrüßungsstimme folgt anschließend.</p>
+            <div class="bh-hymn-default"><span>Bayern-Torhymne · 0:00–0:05</span><a href="https://www.youtube.com/watch?v=VjEcOidS2kQ" target="_blank" rel="noopener noreferrer">Deine YouTube-Quelle</a></div>
+            <div class="bh-option"><label for="bh-hymn-enabled"><span>Torhymne beim Start<small>Beim Start und bei deiner Rückkehr zum Launcher.</small></span><input id="bh-hymn-enabled" class="bh-switch cursor-interaction" type="checkbox" checked></label></div>
+            <div class="bh-field">Optional: deine eigene Audiodatei<button type="button" id="bh-hymn-file" class="bh-action">Audiodatei auswählen</button></div>
+            <p class="bh-hymn-file-name" id="bh-hymn-file-name">Dein Fünf-Sekunden-Ausschnitt ist integriert und bereit.</p>
+            <button type="button" class="bh-action secondary cursor-interaction" id="bh-hymn-reset" hidden>Zurück zur Bayern-Torhymne · 5 Sek.</button>
+            <label class="bh-field">Lautstärke <span id="bh-hymn-volume-label">30 %</span><input id="bh-hymn-volume" type="range" min="0" max="100" step="5" value="30"></label>
+            <div class="bh-control-row"><button type="button" class="bh-action cursor-interaction" id="bh-hymn-preview"><span class="bh-symbol" aria-hidden="true">▶</span>Hymne anhören</button><button type="button" class="bh-action secondary cursor-interaction" id="bh-hymn-home"><span class="bh-symbol" aria-hidden="true">⌂</span>Startbildschirm testen</button><button type="button" class="bh-action secondary cursor-interaction" id="bh-hymn-stop"><span class="bh-symbol" aria-hidden="true">■</span>Stoppen</button></div>
+            <p class="bh-audio-status" id="bh-hymn-status" aria-live="polite">Deine Torhymne ist bereit. Starte die Hörprobe oder teste den Startbildschirm.</p>
+            
+          </section>
+          <section class="bh-settings-panel" data-settings-view="design" aria-label="Design anpassen" hidden>
+            <h3>Fünf Vorlagen. Dein Heimspiel.</h3><p class="bh-help">Wähle die komplette Gestaltung. Apps, Eingänge und deine Begrüßung bleiben erhalten.</p>
+            <div class="bh-template-choices" role="group" aria-label="Designvorlage auswählen">
+              <button type="button" class="bh-template-choice" data-template-choice="dark" aria-pressed="true"><span class="bh-template-preview" data-preview="dark" aria-hidden="true"><span class="bh-mini-top"></span><span class="bh-mini-hero">Servus André!</span><span class="bh-mini-tiles"><span>N</span><span>prime</span><span>▶</span></span><span class="bh-mini-inputs"><span></span><span></span></span></span><strong>Dunkles Bayern</strong><small>Anthrazit, Arena und große App-Kacheln.</small></button>
+              <button type="button" class="bh-template-choice" data-template-choice="redwhite" aria-pressed="false"><span class="bh-template-preview" data-preview="redwhite" aria-hidden="true"><span class="bh-mini-top"></span><span class="bh-mini-hero">Servus André!</span><span class="bh-mini-schedule"></span><span class="bh-mini-tiles"><span>N</span><span>prime</span><span>▶</span></span><span class="bh-mini-inputs"><span></span><span></span></span></span><strong>Rot-Weiß</strong><small>Sportmagazin mit hellen Karten und Bayern-Rot.</small></button>
+              <button type="button" class="bh-template-choice" data-template-choice="apple" aria-pressed="false"><span class="bh-template-preview" data-preview="apple" aria-hidden="true"><span class="bh-mini-top"></span><span class="bh-mini-hero">Servus André!</span><span class="bh-mini-tiles"><span>N</span><span>prime</span><span>▶</span></span><span class="bh-mini-inputs"><span></span><span></span></span></span><strong>Apple-TV-Stil</strong><small>Hell, weich und klar mit Bayern-Akzenten.</small></button>
+              <button type="button" class="bh-template-choice" data-template-choice="lounge" aria-pressed="false"><span class="bh-template-preview" data-preview="lounge" aria-hidden="true"><span class="bh-mini-top"></span><span class="bh-mini-hero">Servus André!</span><span class="bh-mini-tiles"><span>N</span><span>prime</span><span>▶</span></span><span class="bh-mini-inputs"><span></span><span></span></span></span><strong>Bayern Lounge</strong><small>Große Uhr, klare Logos und eigene Geräte-Karten.</small></button>
+              <button type="button" class="bh-template-choice" data-template-choice="rotglut" aria-pressed="false"><span class="bh-template-preview" data-preview="rotglut" aria-hidden="true"><span class="bh-mini-top"></span><span class="bh-mini-hero">Servus André!</span><span class="bh-mini-tiles"><span>N</span><span>prime</span><span>▶</span></span><span class="bh-mini-inputs"><span></span><span></span></span></span><strong>Bayern Rotglut</strong><small>Tiefes Bayern-Rot und helle Geräte-Karten.</small></button>
+            </div>
+            <div class="bh-template-toolbar"><p id="bh-template-status" role="status" aria-live="polite">Dunkles Bayern ist ausgewählt.</p><button type="button" class="bh-action secondary" id="bh-template-preview">Startbildschirm ansehen<span class="bh-symbol" aria-hidden="true">›</span></button></div>
+            <label class="bh-field">Kachelecken <span id="bh-round-label">17 px</span><input id="bh-round" type="range" min="5" max="27" step="2" value="17"></label>
+            <div class="bh-divider"></div>
+            
+            <div class="bh-option"><label for="bh-status-enabled"><span>Gerätestatus anzeigen<small>Zeigt verfügbare Statusangaben des Fernsehers.</small></span><input id="bh-status-enabled" class="bh-switch cursor-interaction" type="checkbox" checked></label></div>
+          </section>
+          <section class="bh-settings-panel" data-settings-view="ambient" aria-label="Ambient und Bildschirmschoner" hidden>
+            <h3>Eine Pause im Bayern-Stil.</h3><p class="bh-help">Eine ruhige Uhr, das Wappen und dezentes Bayern-Rot.</p>
+            <div class="bh-option"><label for="bh-ambient-enabled"><span>Ambient-Uhr<small>Startet nach der gewählten Zeit ohne Bedienung.</small></span><input id="bh-ambient-enabled" class="bh-switch cursor-interaction" type="checkbox" checked></label></div>
+            <label class="bh-field">Start nach<select id="bh-ambient-delay"><option value="5">5 Minuten</option><option value="10" selected>10 Minuten</option><option value="20">20 Minuten</option></select></label>
+            <div class="bh-control-row"><button type="button" class="bh-action cursor-interaction" data-ambient><span class="bh-symbol" aria-hidden="true">☾</span>Ambient ansehen</button></div>
+          </section>
+          <section class="bh-settings-panel bh-update-panel" data-settings-view="updates" aria-label="App aktualisieren" hidden>
+            <h3>Dein Heimspiel bleibt aktuell.</h3><p class="bh-help">Prüfe neue Versionen oder wähle eine APK-Datei. Deine Designs und Einstellungen bleiben bei einem Update erhalten.</p>
+            <div class="bh-update-version">Installiert: <strong id="bh-update-version">0.5.0</strong></div>
+            <div class="bh-update-card"><p id="bh-update-status" role="status" aria-live="polite">APK-Datei auswählen oder eine Online-Quelle hinterlegen.</p><progress id="bh-update-progress" max="100" value="0" hidden aria-label="Download-Fortschritt"></progress><p id="bh-update-notes" hidden></p></div>
+            <div class="bh-control-row"><button type="button" class="bh-action" id="bh-update-check" disabled>Nach Updates suchen</button><button type="button" class="bh-action secondary" id="bh-update-file">APK-Datei auswählen</button></div>
+            <div class="bh-control-row"><button type="button" class="bh-action secondary" id="bh-update-download" disabled>Herunterladen</button><button type="button" class="bh-action" id="bh-update-install" disabled>Update installieren</button></div>
+            <p class="bh-help bh-update-hint">Die App prüft die Datei. Die Installation bestätigst du im Systemfenster deines Fernsehers.</p>
+            <button type="button" class="bh-action secondary" id="bh-update-permission">Installationsfreigabe öffnen</button>
+            <div class="bh-divider"></div>
+            <label class="bh-field">Adresse für Online-Updates<input id="bh-update-source" type="url" inputmode="url" spellcheck="false" autocomplete="off" maxlength="2048" placeholder="HTTPS-Adresse deines Update-Kanals"></label>
+            <div class="bh-control-row"><button type="button" class="bh-action secondary" id="bh-update-save-source">Quelle speichern</button></div>
+            <p class="bh-help">Ohne Online-Quelle kannst du eine APK-Datei auswählen. Mit einer hinterlegten Quelle zeigt „Nach Updates suchen“ neue Versionen an.</p>
+          </section>
+        </div>
+      </section>
+    </main>
+    <div class="bh-overlay" role="dialog" aria-modal="true" aria-label="Hinweis" data-mode="source" hidden><div class="bh-overlay-top"><span id="bh-overlay-kind">HDMI-Vorschau</span><button type="button" class="bh-overlay-back cursor-interaction"><span class="bh-symbol" aria-hidden="true">‹</span>Zurück</button></div><div class="bh-overlay-center"><img class="bh-ambient-crest" src="bayern-crest.png" alt="" hidden><div class="bh-overlay-icon"><span class="bh-symbol" aria-hidden="true">▣</span></div><div class="bh-overlay-title"></div><div class="bh-overlay-text"></div></div><div class="bh-overlay-foot">Bayern Heimspiel</div></div>
+  </div>
+  
+</div>
+</div><div id="bh-toast" role="status" aria-live="polite" hidden></div><script src="launcher.js"></script></body></html>
